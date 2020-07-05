@@ -172,12 +172,19 @@ class Editor extends Component {
     this.setState({ valid: true, code: props.code });
   }
 
+  serialize = code => {
+    // so we don't json parse this and error, sometimes code is
+    // an empty string or undefined
+    try {
+      return JSON.stringify(JSON.parse(code));
+    } catch (e) {
+      return String(code);
+    }
+  };
+
   shouldComponentUpdate(nextProps, nextState) {
     if (this.state.valid) {
-      return (
-        JSON.stringify(JSON.parse(nextProps.code)) !==
-        JSON.stringify(JSON.parse(this.state.code))
-      );
+      return this.serialize(nextProps.code) !== this.serialize(this.state.code);
     }
     return false;
   }

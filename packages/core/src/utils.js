@@ -304,7 +304,12 @@ export function getDefaultFormState(
   if (isObject(formData) || Array.isArray(formData)) {
     return mergeDefaultsWithFormData(defaults, formData);
   }
-  if (formData === 0 || formData === false || formData === "") {
+  if (
+    formData === 0 ||
+    formData === false ||
+    formData === "" ||
+    formData === null
+  ) {
     return formData;
   }
   return formData || defaults;
