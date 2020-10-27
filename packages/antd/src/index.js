@@ -24,6 +24,9 @@ import TextWidget from './widgets/TextWidget';
 import UpDownWidget from './widgets/UpDownWidget';
 import URLWidget from './widgets/URLWidget';
 
+import StringWidgit from "./widgets/StringWidgit";
+import TimestampStringWidgit from "./widgets/TimestampStringWidgit";
+
 import ErrorList from './ErrorList';
 
 // import './index.less';
@@ -37,23 +40,25 @@ export const Fields = {
 };
 
 export const Widgets = {
-  AltDateTimeWidget,
-  AltDateWidget,
-  CheckboxesWidget,
-  CheckboxWidget,
-  ColorWidget,
-  DateTimeWidget,
-  DateWidget,
-  EmailWidget,
-  PasswordWidget,
-  RadioWidget,
-  RangeWidget,
-  SelectWidget,
-  TextareaWidget,
-  TextWidget,
-  UpDownWidget,
-  URLWidget,
-};
+         AltDateTimeWidget,
+         AltDateWidget,
+         CheckboxesWidget,
+         CheckboxWidget,
+         ColorWidget,
+         DateTimeWidget,
+         DateWidget,
+         EmailWidget,
+         PasswordWidget,
+         RadioWidget,
+         RangeWidget,
+         SelectWidget,
+         TextareaWidget,
+         TextWidget,
+         UpDownWidget,
+         URLWidget,
+         StringWidgit,
+         TimestampStringWidgit
+       };
 
 export const Theme = {
   ArrayFieldTemplate,

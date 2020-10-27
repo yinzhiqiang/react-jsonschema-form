@@ -2,7 +2,7 @@ import React from "react";
 
 import Form from "antd/lib/form";
 
-import WrapIfAdditional from "./WrapIfAdditional";
+import WrapIfAdditional from "@coocoon/rjsf_antd/dist/cjs/templates/FieldTemplate/WrapIfAdditional";
 
 const VERTICAL_LABEL_COL = { span: 24 };
 const VERTICAL_WRAPPER_COL = { span: 24 };
