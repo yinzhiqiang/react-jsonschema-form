@@ -19,7 +19,11 @@ const RadioWidget = ({
   schema,
   value,
 }) => {
-  const { readonlyAsDisabled = true } = formContext;
+
+  const { readonlyAsDisabled = true } = {
+    readonlyAsDisabled: true,
+    ...formContext,
+  };
 
   const { enumOptions, enumDisabled } = options;
 
@@ -42,7 +46,7 @@ const RadioWidget = ({
     >
       {enumOptions.map(({ value: optionValue, label: optionLabel }, i) => (
         <Radio
-          autoFocus={i === 0 ? autofocus : false}
+          autoFocus={i === 0 ? (typeof autofocus === "undefined" ? false: autofocus) : false}
           disabled={enumDisabled && enumDisabled.indexOf(value) !== -1}
           key={`${optionValue}`}
           value={`${optionValue}`}

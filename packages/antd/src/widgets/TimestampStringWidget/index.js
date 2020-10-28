@@ -1,4 +1,5 @@
 import React from "react";
+import moment from "moment";
 
 function timestamp2Str(timestamp, format) {
   return moment(timestamp).format(format);
