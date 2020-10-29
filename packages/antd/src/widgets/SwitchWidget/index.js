@@ -1,10 +1,10 @@
 import React from "react";
 import { Switch } from "antd";
 
-const BadgeWidgit = ({
-  autofocus,
-  disabled,
-  formContext,
+const SwitchWidget = ({
+  autofocus = false,
+  disabled = false,
+  formContext = { readonlyAsDisabled: true },
   id,
   // label,
   multiple,
@@ -13,7 +13,7 @@ const BadgeWidgit = ({
   onFocus,
   options,
   placeholder,
-  readonly,
+  readonly = false,
   required,
   schema,
   value,
@@ -30,4 +30,4 @@ const BadgeWidgit = ({
   );
 };
 
-export default BadgeWidgit;
+export default SwitchWidget;

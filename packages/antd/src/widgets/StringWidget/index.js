@@ -1,6 +1,6 @@
 import React from "react";
 
-const StringWidgit = ({value}) => {
+const StringWidget = ({value}) => {
       return (
       <div>
           {String(value)}
@@ -8,4 +8,4 @@ const StringWidgit = ({value}) => {
     );
 }
 
-export default StringWidgit;
+export default StringWidget;

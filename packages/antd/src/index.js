@@ -25,8 +25,9 @@ import UpDownWidget from "./widgets/UpDownWidget";
 import URLWidget from "./widgets/URLWidget";
 
 import StringWidget from "./widgets/StringWidget";
-import TimestampStringWidget from "./widgets/BadgeWidget";
+import TimestampStringWidget from "./widgets/TimestampStringWidget";
 import BadgeWidget from "./widgets/BadgeWidget";
+import SwitchWidget from "./widgets/SwitchWidget";
 
 import ErrorList from "./ErrorList";
 
@@ -60,6 +61,7 @@ export const Widgets = {
   StringWidget,
   TimestampStringWidget,
   BadgeWidget,
+  SwitchWidget,
 };
 
 export const Theme = {

@@ -4,9 +4,9 @@ import React from 'react';
 import Radio from 'antd/lib/radio';
 
 const RadioWidget = ({
-  autofocus,
-  disabled,
-  formContext,
+  autofocus = false,
+  disabled = false,
+  formContext = { readonlyAsDisabled: true },
   id,
   // label,
   onBlur,
@@ -14,21 +14,17 @@ const RadioWidget = ({
   onFocus,
   options,
   // placeholder,
-  readonly,
+  readonly = false,
   // required,
   schema,
   value,
 }) => {
-
-  const { readonlyAsDisabled = true } = {
-    readonlyAsDisabled: true,
-    ...formContext,
-  };
+  const { readonlyAsDisabled } = formContext;
 
   const { enumOptions, enumDisabled } = options;
 
   const handleChange = ({ target: { value: nextValue } }) =>
-    onChange(schema.type === 'boolean' ? nextValue !== 'false' : nextValue);
+    onChange(schema.type === "boolean" ? nextValue !== "false" : nextValue);
 
   const handleBlur = ({ target }) => onBlur(id, target.value);
 
@@ -42,15 +38,13 @@ const RadioWidget = ({
       onBlur={!readonly ? handleBlur : undefined}
       onChange={!readonly ? handleChange : undefined}
       onFocus={!readonly ? handleFocus : undefined}
-      value={`${value}`}
-    >
+      value={`${value}`}>
       {enumOptions.map(({ value: optionValue, label: optionLabel }, i) => (
         <Radio
-          autoFocus={i === 0 ? (typeof autofocus === "undefined" ? false: autofocus) : false}
+          autoFocus={i === 0 ? autofocus : false}
           disabled={enumDisabled && enumDisabled.indexOf(value) !== -1}
           key={`${optionValue}`}
-          value={`${optionValue}`}
-        >
+          value={`${optionValue}`}>
           {optionLabel}
         </Radio>
       ))}
