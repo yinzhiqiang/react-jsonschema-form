@@ -28,6 +28,8 @@ import StringWidget from "./widgets/StringWidget";
 import TimestampStringWidget from "./widgets/TimestampStringWidget";
 import BadgeWidget from "./widgets/BadgeWidget";
 import SwitchWidget from "./widgets/SwitchWidget";
+import SliderWidget from "./widgets/SliderWidget";
+import TagWidget from "./widgets/TagWidget";
 
 import ErrorList from "./ErrorList";
 
@@ -62,6 +64,8 @@ export const Widgets = {
   TimestampStringWidget,
   BadgeWidget,
   SwitchWidget,
+  SliderWidget,
+  TagWidget
 };
 
 export const Theme = {
